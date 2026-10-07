@@ -314,6 +314,31 @@ a { color: inherit; text-decoration: none; }
   gap: 10px;
 }
 
+.tour-details {
+  margin-top: 40px;
+  max-width: 760px;
+}
+
+.tour-details h3 {
+  margin-top: 24px;
+  margin-bottom: 14px;
+  color: var(--orange);
+}
+
+.tour-experiences {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tour-tagline {
+  margin-top: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--orange);
+}
+
 .quote cite {
   color: var(--muted);
   font-size: 0.9rem;
