@@ -291,6 +291,37 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
+/* Network */
+.network-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.network-photo {
+  margin: 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.network-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.network-photo figcaption {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text, #222);
+}
+
 /* Contact */
 .contact-list {
   list-style: none;
