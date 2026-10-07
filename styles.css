@@ -239,6 +239,81 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 12px;
 }
 
+/* Coach feature (Coach Kem) */
+.coach-feature {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  align-items: center;
+  margin: 24px 0 36px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.coach-feature img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.coach-feature h3 {
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.coach-feature h3 span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text, #444);
+}
+
+.coach-feature blockquote {
+  margin-top: 14px;
+  padding-left: 14px;
+  border-left: 3px solid var(--orange);
+  font-style: italic;
+}
+
+.coach-feature blockquote cite {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .coach-feature, .tour-feature {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tour announcement */
+.tour-feature {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.tour-feature img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: block;
+}
+
+.tour-list {
+  list-style: none;
+  margin: 16px 0;
+  display: grid;
+  gap: 10px;
+}
+
 .quote cite {
   color: var(--muted);
   font-size: 0.9rem;
