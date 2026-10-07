@@ -5,34 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Batang Europa | Basketball Development</title>
 <meta name="description" content="Batang Europa - developing basketball talent and community through training, mentorship, and competition.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
-    <a href="#top" class="logo">Batang Europa</a>
+    <a href="#top" class="logo">
+      <img src="assets/favicon.svg" alt="" width="28" height="28">
+      Batang Europa
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav>
       <a href="#about">About</a>
       <a href="#programs">Programs</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
 
 <section id="top" class="hero">
-  <div class="container">
-    <h1>Developing Basketball Talent,<br>Building Character.</h1>
-    <p>Batang Europa is a basketball development program focused on skills, teamwork, and discipline for the next generation of players.</p>
-    <a href="#contact" class="btn">Join the Program</a>
+  <div class="container hero-inner">
+    <div>
+      <p class="eyebrow">Basketball Development Program</p>
+      <h1>Developing Basketball Talent,<br>Building Character.</h1>
+      <p class="lead">Batang Europa trains young athletes through structured coaching — focusing on fundamentals, athleticism, and mindset. Every player deserves a real path to grow, on and off the court.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn">Join the Program</a>
+        <a href="#programs" class="btn btn-outline">See Programs</a>
+      </div>
+    </div>
+    <div class="hero-stat-grid">
+      <div class="stat"><strong>100+</strong><span>Players Trained</span></div>
+      <div class="stat"><strong>10+</strong><span>Coaches &amp; Mentors</span></div>
+      <div class="stat"><strong>3</strong><span>Program Levels</span></div>
+      <div class="stat"><strong>15+</strong><span>Tournaments Joined</span></div>
+    </div>
   </div>
 </section>
 
 <section id="about" class="section">
   <div class="container">
     <h2>About Batang Europa</h2>
-    <p>Batang Europa trains young athletes through structured basketball development — focusing on fundamentals, athleticism, and mindset. We believe every player deserves quality coaching and a path to grow both on and off the court.</p>
+    <p>Batang Europa trains young athletes through structured basketball development — focusing on fundamentals, athleticism, and mindset. We believe every player deserves quality coaching and a path to grow both on and off the court. Our program blends skill development with discipline, teamwork, and sportsmanship, preparing players for competition at every level.</p>
   </div>
 </section>
 
@@ -56,14 +77,71 @@
   </div>
 </section>
 
-<section id="gallery" class="section">
+<section id="coaches" class="section">
+  <div class="container">
+    <h2>Coaching Staff</h2>
+    <p class="section-intro">Experienced mentors dedicated to developing every player's full potential.</p>
+    <div class="cards">
+      <div class="card coach-card">
+        <div class="avatar">C1</div>
+        <h3>Head Coach</h3>
+        <p>Leads program strategy, player development plans, and tournament preparation.</p>
+      </div>
+      <div class="card coach-card">
+        <div class="avatar">C2</div>
+        <h3>Skills Coach</h3>
+        <p>Focused on ball-handling, shooting mechanics, and individual skill workouts.</p>
+      </div>
+      <div class="card coach-card">
+        <div class="avatar">C3</div>
+        <h3>Strength &amp; Conditioning</h3>
+        <p>Builds athleticism, speed, and injury-prevention habits for young athletes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="section alt">
+  <div class="container">
+    <h2>Training Schedule</h2>
+    <table class="schedule-table">
+      <thead>
+        <tr><th>Day</th><th>Session</th><th>Time</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tuesday</td><td>Youth Training</td><td>5:00 PM – 6:30 PM</td></tr>
+        <tr><td>Thursday</td><td>Competitive Development</td><td>6:00 PM – 8:00 PM</td></tr>
+        <tr><td>Saturday</td><td>Camps &amp; Open Scrimmage</td><td>9:00 AM – 12:00 PM</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Schedule may vary by season — contact us to confirm current sessions.</p>
+  </div>
+</section>
+
+<section id="testimonials" class="section">
+  <div class="container">
+    <h2>What Families Say</h2>
+    <div class="cards">
+      <blockquote class="card quote">
+        <p>&ldquo;Batang Europa gave my son discipline and confidence, not just basketball skills.&rdquo;</p>
+        <cite>— Parent of a Youth Program player</cite>
+      </blockquote>
+      <blockquote class="card quote">
+        <p>&ldquo;The coaches genuinely care about every player's growth, on and off the court.&rdquo;</p>
+        <cite>— Parent of a Competitive Development player</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section alt">
   <div class="container">
     <h2>Gallery</h2>
     <p>Photos and highlights coming soon.</p>
   </div>
 </section>
 
-<section id="contact" class="section alt">
+<section id="contact" class="section">
   <div class="container">
     <h2>Get in Touch</h2>
     <p>Interested in joining Batang Europa or have questions about our programs?</p>
@@ -79,6 +157,17 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.site-header nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
 </script>
 </body>
 </html>
